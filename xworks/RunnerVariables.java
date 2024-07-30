@@ -43,13 +43,14 @@ class Juic{
 	double price;
 	
 	juice(){
-		System.out.rpitnln("this is juicce constructor");
+		System.ou/t.rpitnln("this is juicce constructor");
 	}
 }
 
 class Palace{
 	String name;
 	String palacePlace;
+	int visiting_charde  = 10;
 	
 	Palace(){
 		
@@ -58,6 +59,7 @@ class Palace{
 
 class AlcoholBrand{
 	
+	dounblu price = 1234.45;
 	String name;
 	double cost;
 	AlcoholBrand(){
@@ -67,6 +69,7 @@ class AlcoholBrand{
 
 class Food{
 	
+	String personname = "Arun";
 	String name;
 	double price;
 	String hotelName;
@@ -82,6 +85,7 @@ class RunnerVariables{
 		System.out.println("The number of registers is: "+matrimony.noOfRegisters);
 		System.out.println("The number of registers is: "+matrimony.noOfMale);
 		System.out.println("The number of registers is: "+matrimony.noOfFemale);
+		System.out.println("The number of registers is: "+matrimony.personname);
 		
 		Application application = new Application();
 		application.price = 560.25;
