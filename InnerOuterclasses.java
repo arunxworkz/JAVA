@@ -39,6 +39,9 @@ class InnerOuterclasses{
 		
 		Outerclass out = new Outerclass();
 		out.outermethod();
+		/*Innerclass in = new Innerclass();
+		in.innerMethod(); this will be an error i.e., can not find symbol InnerClass()*/
+		
 		Outerclass.Innerclass ouin = out.new Innerclass();
 		ouin.innerMethod();
 		
