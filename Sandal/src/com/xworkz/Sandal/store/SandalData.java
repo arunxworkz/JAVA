@@ -19,6 +19,7 @@ public class SandalData {
 		System.out.println("The Size: "+size);
 		System.out.println("The Cost: "+cost);
 		System.out.println("The Color: "+color);
+		System.out.println("========================================");
 	}
 	
 	
