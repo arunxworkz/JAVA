@@ -14,6 +14,7 @@ public class Market {
 	public void show() {
 		System.out.println("The name of market is : "+name);
 		System.out.println("The name of location is : "+location);
+		System.out.println("========================================");
 	}
 	
 }
