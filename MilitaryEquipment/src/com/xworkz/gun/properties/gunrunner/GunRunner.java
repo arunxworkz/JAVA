@@ -32,6 +32,7 @@ public class GunRunner {
 		/*dboss.fold(); - Here also same as above where 'gun' references is declared as Gun type
 		 * and no initilization is done. Once agian null pointer exception will
 		 * occur. To avoid this apply condition in Dboss class */
+		
 		Gun gun1 = new Gun("Shotgun", 8, null);
 		
 		dboss.gun = gun1;
