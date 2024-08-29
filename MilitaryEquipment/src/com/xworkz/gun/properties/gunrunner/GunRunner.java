@@ -1,5 +1,6 @@
 package com.xworkz.gun.properties.gunrunner;
 
+import com.xworkz.gun.properties.Dboss;
 import com.xworkz.gun.properties.Gun;
 import com.xworkz.gun.properties.Police;
 import com.xworkz.gun.properties.Solider;
@@ -25,6 +26,16 @@ public class GunRunner {
 		police.parameter(gun);
 		
 		System.out.println("=================================");
+		
+		Dboss dboss = new Dboss();
+		
+		/*dboss.fold(); - Here also same as above where 'gun' references is declared as Gun type
+		 * and no initilization is done. Once agian null pointer exception will
+		 * occur. To avoid this apply condition in Dboss class */
+		Gun gun1 = new Gun("Shotgun", 8, null);
+		
+		dboss.gun = gun1;
+		dboss.fold();
 		
 	}
 

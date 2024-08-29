@@ -14,7 +14,7 @@ public class Gun {
 	}
 	
 	void fire() {
-		System.out.println(name+" has a capaity to fire "+noOfRounds+" bullet");
+		System.out.println(name+" has a capaity to fire "+noOfRounds+" rounds");
 	}
 	
 	void display()
