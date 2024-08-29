@@ -1,6 +1,7 @@
 package com.xworkz.gun.properties.gunrunner;
 
 import com.xworkz.gun.properties.Dboss;
+import com.xworkz.gun.properties.Godse;
 import com.xworkz.gun.properties.Gun;
 import com.xworkz.gun.properties.Police;
 import com.xworkz.gun.properties.Solider;
@@ -38,6 +39,10 @@ public class GunRunner {
 		dboss.gun = gun1;
 		dboss.fold();
 		
+		System.out.println("=================================");
+		
+		Godse godse = new Godse();
+		godse.revolutionary();
 	}
 
 }
