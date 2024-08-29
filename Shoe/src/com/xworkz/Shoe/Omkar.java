@@ -2,11 +2,16 @@ package com.xworkz.Shoe;
 
 public class Omkar {
 
-	public void method(Shoe shoe) {
+	public void method(Shoe shoe) { //parameter
 		
-		shoe.brand = "Spakr";
 		
-		shoe.safegaued();
+		
+		if(shoe != null) {
+			shoe.safegaued();
+		}
+		else {
+			System.out.println("Nothign to print");
+		}
 		
 	}
 	

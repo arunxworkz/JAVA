@@ -21,13 +21,11 @@ public class RunnerClass {
 		omkar.method(shoe);
 		
 		Harshitha hr = new Harshitha();
-		hr.fold();
+		//hr.fold();
+		
 		
 		Shoe shoe1 = new Shoe();
-		shoe1.brand = "Puma";
-		
-		hr.shoe = shoe1;
-		hr.fold();
+		hr.shoe = null;
 		
 		
 	}
