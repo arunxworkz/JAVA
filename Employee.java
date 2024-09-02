@@ -1,4 +1,5 @@
-/*Constructor chaining is a chaining where one constructor will call another chaining.
+/*Constructor chaining is a chaining where one constructor will call another chaining 
+with in the same class.
 Condiser below exampe to an employee details where the first constructor is having the 2 parameters.
 Suppose in future context if we need to add employee phone number and employee address
 then we need to create another constructor. Here a doubt will arrise that insted of craeting
@@ -34,7 +35,7 @@ class Employee{
 		this() method will leads to error as each constructor will be having
 		only one implicit(automatically given by compiler) or explicit constructor call*/
 		
-		this.designation = designation;
+		 this.designation = designation;
 		
 	}
 	
