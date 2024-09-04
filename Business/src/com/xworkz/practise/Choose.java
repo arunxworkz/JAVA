@@ -23,7 +23,7 @@ public class Choose extends SmartPhone{
 	
 	@Override
 	public void price() {
-		System.out.println("The smart phone ambasidor is: "+ambasidor+" and price of the phone is "+price);
+		System.out.println("The smart phone ambasidor is: "+ambasidor);
 	}
 	
 	
