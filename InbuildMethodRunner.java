@@ -22,8 +22,11 @@ class InbuildMethodRunner{
 		System.out.println("---------------------------------------");
 		
 		
-		//CustomClass customClass = new CustomClass();
-		//customClass.printinr();
+		CustomClass customClass = new CustomClass();
+		customClass.printinr();
+		
+		System.out.println("---------------------------------------");
+		
 		
 		InbuildMethod extends1 = new CustomClass();
 		((CustomClass)extends1).printinr();
