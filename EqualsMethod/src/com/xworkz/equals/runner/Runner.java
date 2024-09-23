@@ -20,7 +20,7 @@ public class Runner {
 		productBased1.equals(companies12);
 		productBased1.equals(companies1);
 		
-		//parents can not point to child, but child can.
+		//child refernce can not point to parent, but parent can.
 		//ProductBased productBased = new Companies("Adobe", 250,"Narayen");
 		
 		System.out.println("---------------------------------");
@@ -29,14 +29,21 @@ public class Runner {
 		Companies companies13 = new Companies("Adobe", 2500,"Andy");
 		pd.equals(companies13); // comapring itselef, it will always return true
 		/*the above will not work, it always return false even we are checking the 
-		 * same values because,
-		 * we are comparing two objects of classes, in one if condition we are checking 
+		 * same value s because,
+		 * we are comparing two objects of 2 classes, in one if condition we are checking 
 		 * ceo name and in other we are cheacking noOfEmployee, however we have to compare 
 		 * both as below*/
-		
+		System.out.println("---------------------------------");
 		ProductBased pd1 = new ProductBased("Google", 2500,"Sundar");
 		Companies companies14 = new Companies("Adobe", 2500,"Sundar");
 		pd1.equals(companies14);  // this will return true
+		companies14.toString();
+		pd1.toString();
+		System.out.println("---------------------------------");
+		Companies c12 = new ProductBased("Apple", 2400, "Tim");
+		ProductBased pd10 = new ProductBased("Apple", 240, "Lim");
+		pd10.equals(c12);
+		
 	}
 
 }

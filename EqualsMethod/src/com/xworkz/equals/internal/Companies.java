@@ -14,6 +14,7 @@ public class Companies {
 
 	@Override
 	public String toString() {
+		System.out.println("Companies " + "\n" + "name: " + name + ", noOfEmployees: " + noOfEmployees + ", ceo: " + ceo);
 		return "Companies " + "\n" + "name: " + name + ", noOfEmployees: " + noOfEmployees + ", ceo: " + ceo;
 	}
 	
