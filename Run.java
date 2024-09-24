@@ -52,7 +52,23 @@ class Run{
 		people.dance(carnaticMusic);
 		people.dance(hindustaniMusic);
 		
+		//people.dance(); // This causes java compiler time error 
+		/*Her the compiler wil get confuse about invoking the dance method
+		it will not be able to identify which dance() method is to be invoked.
+		Therefore the dance() method should be overloaded so that the compiler will
+		come to know about invoking the dance() method based on the parameter.*/
 		
+		Run run = new Run();
+		run.main(10);
 		
+		System.out.println("This is actual main method");
+		
+		Music music1 = new CarnaticMusic();
+		people.dance(music1);
+		
+	}
+	
+	public static void main(int a){ // main method can be overloaded
+		System.out.println("Thhis is overloaded main method");
 	}
 }
