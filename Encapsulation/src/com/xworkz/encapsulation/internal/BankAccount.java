@@ -13,7 +13,7 @@ public class BankAccount {
 	}
 	
 	public void setacc_no(long acc_no) {
-		System.out.println("Account numbers: "+acc_no);
+		//System.out.println("Account numbers: "+acc_no);
 		this.acc_no = acc_no;	
 	}
 	
