@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Xworkz</title>
+</head>
+<body>	
+	<h1>Comapany Details</h1>
+	
+	<!-- No action attribute in the form tag
+	can have same value. -->
+	
+	<form action = "order">
+		<!--<label>Order</label>-->
+		<input type = "submit" value = "Order Page"><br>
+	</form>
+	
+	<!-- Here we need to use the 2 different forms because
+	when the value for action is provided as same then the server
+	will get confuse about invoking the next page. -->
+	
+	<form action = "contact">
+		<input type = "submit" value = "Contact Page">
+	</form>
+	
+	<form action = "search">
+		<input type = "search" value = "search"/>
+	</form>
+	
+	<form action = "register">
+		<input type = "submit" value = "register"/>
+	</form>
+	
+</body>
+</html>

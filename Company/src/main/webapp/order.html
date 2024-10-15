@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Order Form</title>
+</head>
+<body>
+	
+	<form action = "orderDetails">
+	<pre>
+	<lable>Customer Name</lable>
+	<input type = "text" name = "customerName"/><br>
+	<lable>Item</lable>
+	<select name = "items">
+			<option>Others</option>
+			<option>Book</option>
+			<option>Pen</option>
+	</select><br>
+	<label>Quantity</label>
+	<input type = "number" name = "quantity"/><br>
+	<input type = "submit" value = "orderDetails" />
+	<!-- This orderDetails is the value for for the input button
+	so that it could display the details in next page.
+	This 'orderDetails' need to be provided as input for the 
+	urlPattrens in java code -->
+	</pre>
+	</form>
+	
+	
+</body>
+</html>
