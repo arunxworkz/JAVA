@@ -99,8 +99,9 @@ public class EmailDTORunner {
 		collection2.removeIf(ref->!(ref instanceof EmailDTO));	
 		collection2.forEach(ref->System.out.println(ref));
 		System.out.println(collection2.size());
-		/*collection.clear();
-		System.out.println(collection.isEmpty());*/
+		
+		collection.clear();
+		System.out.println(collection.isEmpty());
 		
 		
 		
