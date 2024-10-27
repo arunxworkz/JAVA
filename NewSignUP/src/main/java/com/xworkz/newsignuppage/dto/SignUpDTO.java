@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class SignUpDTO implements Serializable{
 	
-	String name;
+	String username;
 	String phnoNumber;
 	
 	public SignUpDTO() {
@@ -12,20 +12,20 @@ public class SignUpDTO implements Serializable{
 	}
 	
 	
-	public SignUpDTO(String name, String phnoNumber2) {
+	public SignUpDTO(String username, String phnoNumber2) {
 		super();
-		this.name = name;
+		this.username = username;
 		this.phnoNumber = phnoNumber2;
 	}
 	@Override
 	public String toString() {
-		return "SignUpDTO [name=" + name + ", phnoNumber=" + phnoNumber + "]";
+		return "SignUpDTO [name=" + username + ", phnoNumber=" + phnoNumber + "]";
 	}
 	public String getName() {
-		return name;
+		return username;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setName(String username) {
+		this.username = username;
 	}
 	public String getPhnoNumber() {
 		return phnoNumber;

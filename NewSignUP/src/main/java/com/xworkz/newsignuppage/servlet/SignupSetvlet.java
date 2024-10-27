@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.PreparedStatement;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -58,28 +59,32 @@ public class SignupSetvlet extends HttpServlet{
 			PreparedStatement prepedStatement = null;
 			//Statement statement = connection.createStatement();
 			
-			String insertQuery = "insert into mytable values(name, phnoNumber) values(? , ?)";
-			
+			String insertQuery = "insert into mytable (name, phnoNumber) values(? , ?)";
 			/*prepedStatement = connection.prepedStatement(insertQuery);
 			prepedStatement.setString(1, name);
 			prepedStatement.setString(2, phnoNumber);*/
 			
 			prepedStatement = connection.prepareStatement(insertQuery);
-	        prepedStatement.setString(1, signUpDTO.getName());
-	        prepedStatement.setString(2, signUpDTO.getPhnoNumber());
+	        prepedStatement.setString(1, name);
+	        prepedStatement.setString(2, phnoNumber);
 			
-			int value = prepedStatement.executeUpdate(insertQuery);
+			int value = prepedStatement.executeUpdate();
 			
 			if(value > 0) {
 				System.out.println("Values inserted");
+				req.setAttribute("success", "Registration is successful");
 			}else {
 				System.err.println("Not executed");
+				req.setAttribute("unsuccessful", "Registration is not successful");
 			}
 			
 		} catch (SQLException e) {
 			System.err.println("Connection not Established");
 			e.printStackTrace();
 		}
+		
+		RequestDispatcher requestDispatcher = req.getRequestDispatcher("index.jsp");
+		requestDispatcher.forward(req, resp);
 	}
 	
 }
