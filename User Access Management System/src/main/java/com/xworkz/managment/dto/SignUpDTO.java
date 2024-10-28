@@ -8,6 +8,11 @@ public class SignUpDTO implements Serializable{
 	String userName;
 	String password;
 	String role;
+	
+	/*public SignUpDTO() {
+		
+	}*/
+	
 	public SignUpDTO(String userName, String password, String role) {
 		super();
 		this.userName = userName;

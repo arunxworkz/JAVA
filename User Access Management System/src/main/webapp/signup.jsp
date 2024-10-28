@@ -39,6 +39,8 @@
 	</div>	
 	<div class = "container">
 		<form action = "signup" method = "post">
+		<h2>${success}</h2>
+		<h2>${failure}</h2>
 			<div class="row g-3" id = "form">
 		            <div class="col-sm-6">
 		              <label for="firstName" class="form-label">User name</label>

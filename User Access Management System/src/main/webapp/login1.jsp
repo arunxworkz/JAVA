@@ -18,7 +18,7 @@
 			align-items:center;	
 			height:100vh;
 		}
-		.signUpButton{
+		.loginButton{
 			width:100px;
 			height:50px;
 			display:flex;
@@ -38,7 +38,9 @@
 		<h1 style = "text-align:center">Login</h1>
 	</div>	
 	<div class = "container">
-		<form action = "login" method = "post">
+		<form action = "login1" method = "post">
+			<h2>${success}</h2>
+			<h2>${failure}</h2>
 			<div class="row g-3" id = "form">
 		            <div class="col-sm-6">
 		              <label for="firstName" class="form-label">User name</label>
@@ -48,7 +50,7 @@
 		              <label for="lastName" class="form-label">Password</label>
 		              <input type="password" class="form-control" id="lastName" placeholder="enter the password" name = "password"  fdprocessedid="up8um">
 		            </div>
-					<div class = "signUpButton">				
+					<div class = "loginButton">				
 		            	<button class="btn btn-primary rounded-pill px-3" type="submit">Login</button>	
 		            </div>	
 		     </div>
