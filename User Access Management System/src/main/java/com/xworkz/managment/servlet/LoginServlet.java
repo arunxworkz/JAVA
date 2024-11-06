@@ -29,6 +29,7 @@ public class LoginServlet extends HttpServlet {
 		// Get the details from the loginform
 		String userName = req.getParameter("userName");
 		String password = req.getParameter("password");
+		//String role = req.getParameter("role");
 
 		// Check the driver
 		try {
@@ -52,16 +53,29 @@ public class LoginServlet extends HttpServlet {
 			connection = DriverManager.getConnection(dbUrl, dbUserName, dbPassword);
 
 			// Create sql query ro check the data is present in the database
-			String selectQuery = "select * from users where userName = ?";
+			String selectQuery = "select * from users where userName = ? and password = ?";
 
 			// Prepared statement for getting the inputs from the form
 			PreparedStatement preparedStatement = connection.prepareStatement(selectQuery);
 			preparedStatement.setString(1, userName);
+			preparedStatement.setString(2,  password);
+			
 			ResultSet resultSet = preparedStatement.executeQuery();
-			PrintWriter printWriter = resp.getWriter();
+			//PrintWriter printWriter = resp.getWriter();
+			
 			if (resultSet.next()) {
 				// Login successful
 				int userId = resultSet.getInt("id");
+				String role = resultSet.getString("role"); //Get the role from the database
+				if("admin".equalsIgnoreCase(role)) {
+					resp.sendRedirect("createsoftware.jsp");
+				}else if("employee".equalsIgnoreCase(role)){
+					resp.sendRedirect("requestAccess.jsp");
+				}else {
+					req.setAttribute("faailure", "Role is not recognized. Contact Admin");
+					RequestDispatcher requestDispatcher = req.getRequestDispatcher("login1.jsp");
+	                requestDispatcher.forward(req, resp);
+				}
 				// printWriter.println("Login successful! User ID: " + userId);(optional)
 				//resp.sendRedirect("index.jsp");
 				req.setAttribute("success", "login successful"); // Redirect to a success page
@@ -76,8 +90,8 @@ public class LoginServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 
-		RequestDispatcher requestDispatcher = req.getRequestDispatcher("login1.jsp");
-		requestDispatcher.forward(req, resp);
+//		RequestDispatcher requestDispatcher = req.getRequestDispatcher("login1.jsp");
+//		requestDispatcher.forward(req, resp);
 	}
 
 }

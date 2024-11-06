@@ -51,9 +51,13 @@
 		              <input type="password" class="form-control" id="lastName" placeholder="enter the password" name = "password" required="" fdprocessedid="up8um">
 		            </div>
 		            <div class="col-sm-6">
-		              <label for="lastName" class="form-label">Role</label>
-		              <input type="text" class="form-control" id="role" placeholder="enter the role" name = "role" required="" fdprocessedid="up8um">
-		            </div>
+							<label for="role" class="form-label">Role</label>
+							<select class="form-control" id="role" name="role" required>
+								<option value="">Select Role...</option> <!-- Default placeholder option -->
+								<option value="Admin">Admin</option>
+								<option value="Employee">Employee</option>
+							</select>
+					</div>
 					<div class = "signUpButton">				
 		            	<button class="btn btn-primary rounded-pill px-3" type="submit">Signup</button>	
 		            </div>	

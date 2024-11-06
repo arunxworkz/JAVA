@@ -50,6 +50,14 @@
 		              <label for="lastName" class="form-label">Password</label>
 		              <input type="password" class="form-control" id="lastName" placeholder="enter the password" name = "password"  fdprocessedid="up8um">
 		            </div>
+		              <div class="col-sm-6">
+							<label for="role" class="form-label">Role</label>
+							<select class="form-control" id="role" name="role" required>
+								<option value="">Select Role...</option> <!-- Default placeholder option -->
+								<option value="Admin" name = "admin">Admin</option>
+								<option value="Employee" name = "employee">Employee</option>
+							</select>
+					</div>
 					<div class = "loginButton">				
 		            	<button class="btn btn-primary rounded-pill px-3" type="submit">Login</button>	
 		            </div>	
