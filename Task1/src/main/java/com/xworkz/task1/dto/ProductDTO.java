@@ -5,10 +5,10 @@ public class ProductDTO {
 	String companyName;
 	String productName;
 	String productType;
-	String quantity;
-	String cost;
+	int quantity;
+	int cost;
 	
-	public ProductDTO(String companyName, String productName, String productType, String quantity, String cost) {
+	public ProductDTO(String companyName, String productName, String productType, int quantity, int cost) {
 		super();
 		this.companyName = companyName;
 		this.productName = productName;
@@ -41,19 +41,19 @@ public class ProductDTO {
 		this.productType = productType;
 	}
 
-	public String getQuantity() {
+	public int getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(String quantity) {
+	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
 
-	public String getCost() {
+	public int getCost() {
 		return cost;
 	}
 
-	public void setCost(String cost) {
+	public void setCost(int cost) {
 		this.cost = cost;
 	}
 	
