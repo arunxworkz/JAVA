@@ -1,0 +1,6 @@
+com\xworkx\physicsresearch\Servicer\ResearchServiceImpl.class
+com\xworkx\physicsresearch\Servicer\ResearchService.class
+com\xworkx\physicsresearch\entity\ResearchEntity.class
+com\xworkx\physicsresearch\runner\Runner.class
+com\xworkx\physicsresearch\Repository\ResearchRepo.class
+com\xworkx\physicsresearch\Repository\ResearchRepoImpl.class
